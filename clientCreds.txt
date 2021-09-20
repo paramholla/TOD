@@ -1,0 +1,24 @@
+Mule-Internal: access to SAPis
+Client ID:
+8432e5abfc76435f8b384e5093229f01
+Client Secret:
+7394EF9b7146411cbA51FD2c1a83C930
+
+NonMuleApp: access to EAPis
+Client ID:
+58f37644dbe244f1965d447dfa7576aa
+Client Secret:
+bE7Ccd8944f0427e85fFD496249f1CE1
+
+JenkinsApp: for deployment
+087cb003ffb641f582576105e885fe43
+AF60f3b1EfFF4a67a525a6f1b84dd1CB
+
+POST: https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token
+Body: {
+       "client_id" : "087cb003ffb641f582576105e885fe43"
+       "client_secret": "AF60f3b1EfFF4a67a525a6f1b84dd1CB"
+       "grant_type": "client_credentials" 
+}
+
+java -cp secure-properties-tool.jar com.mulesoft.tools.SecurePropertiesTool file encrypt AES CBC aes123456devkey1 secure-local.yaml secure-local2.yaml
